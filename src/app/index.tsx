@@ -1,4 +1,11 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 
 const GREEN = "#00843D";
 const DARK_GREEN = "#006B32";
@@ -40,6 +47,19 @@ export default function App() {
           style={styles.bannerImage}
         />
       </View>
+
+      <View style={styles.sectionHeader}>
+        <Text style={styles.sectionTitle}>Livros em destaque</Text>
+        <Text style={styles.seeAll}>Ver todos</Text>
+      </View>
+
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+        <Text style={[styles.category, styles.categoryActive]}>Todos</Text>
+        <Text style={styles.category}>Tecnologia</Text>
+        <Text style={styles.category}>Educação</Text>
+        <Text style={styles.category}>Ciências</Text>
+        <Text style={styles.category}>Gestão</Text>
+      </ScrollView>
     </View>
   );
 }
@@ -157,5 +177,41 @@ const styles = StyleSheet.create({
     width: 110,
     height: 110,
     resizeMode: "contain",
+  },
+
+  sectionHeader: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: 16,
+  },
+
+  sectionTitle: {
+    fontSize: 24,
+    fontWeight: "900",
+    color: "#111111",
+  },
+
+  seeAll: {
+    color: GREEN,
+    fontSize: 16,
+    fontWeight: "800",
+  },
+
+  category: {
+    backgroundColor: "#EFEFEF",
+    color: "#555555",
+    paddingVertical: 10,
+    paddingHorizontal: 18,
+    borderRadius: 22,
+    fontSize: 15,
+    fontWeight: "600",
+    marginRight: 10,
+    marginBottom: 18,
+  },
+
+  categoryActive: {
+    backgroundColor: GREEN,
+    color: "#FFFFFF",
   },
 });
