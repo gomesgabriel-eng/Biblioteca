@@ -1,4 +1,8 @@
-import { Text, View, StyleSheet } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
+
+const GREEN = "#00843D";
+const DARK_GREEN = "#006B32";
+const LIGHT_GREEN = "#EAF7EF";
 
 export default function App() {
   return (
@@ -16,6 +20,13 @@ const styles = StyleSheet.create({
     padding: 20,
     justifyContent: "center",
     alignItems: "center",
+  },
+
+  logo: {
+    fontSize: 22,
+    fontWeight: "900",
+    color: DARK_GREEN,
+    marginBottom: 10,
   },
 
   title: {
