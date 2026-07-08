@@ -9,6 +9,10 @@ export default function App() {
     <View style={styles.container}>
       <Text style={styles.title}>Biblioteca IFMA</Text>
       <Text style={styles.subtitle}>Seu conhecimento começa aqui</Text>
+
+      <View style={styles.notification}>
+        <Text style={styles.notificationIcon}>🔔</Text>
+      </View>
     </View>
   );
 }
@@ -20,6 +24,14 @@ const styles = StyleSheet.create({
     padding: 20,
     justifyContent: "center",
     alignItems: "center",
+  },
+
+  header: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginTop: 40,
+    marginBottom: 24,
   },
 
   logo: {
@@ -39,5 +51,17 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: "#666666",
     marginTop: 5,
+  },
+  notification: {
+    width: 46,
+    height: 46,
+    borderRadius: 23,
+    backgroundColor: GREEN,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+
+  notificationIcon: {
+    fontSize: 22,
   },
 });
